@@ -1,7 +1,5 @@
 package br.com.fabricadeprogramador.persistencia.entidade;
 
-import org.hibernate.annotations.GeneratorType;
-
 import javax.persistence.*;
 import java.io.Serializable;
 

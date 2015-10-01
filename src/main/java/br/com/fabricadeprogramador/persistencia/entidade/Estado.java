@@ -3,6 +3,7 @@ package br.com.fabricadeprogramador.persistencia.entidade;
 import javax.persistence.*;
 import java.io.Serializable;
 
+@Entity
 public class Estado implements Serializable{
 
 	/**

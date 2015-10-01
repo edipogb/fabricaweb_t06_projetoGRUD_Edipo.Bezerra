@@ -3,6 +3,7 @@ package br.com.fabricadeprogramador.persistencia.entidade;
 import java.io.Serializable;
 import javax.persistence.*;
 
+@Entity
 public class TipoContato implements Serializable{
 
     /**

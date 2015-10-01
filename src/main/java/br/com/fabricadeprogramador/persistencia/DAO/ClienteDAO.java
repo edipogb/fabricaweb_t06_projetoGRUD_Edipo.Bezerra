@@ -16,11 +16,11 @@ public interface ClienteDAO {
 
 	public List<Cliente> buscarPorCidade(Cidade cidade) throws DAOException;
 
-	public List<Cliente> buscarPorEstado(Estado estado);
+	public List<Cliente> buscarPorEstado(Estado estado) throws DAOException;
 
-	public List<Cliente> buscarPorNome(String nome);
+	public List<Cliente> buscarPorNome(String nome) throws DAOException;
 
-	public void buscarPorId(Long id) throws DAOException;
+	public Cliente buscarPorId(Long id) throws DAOException;
 
 	public void remover(Long id) throws DAOException;
 
