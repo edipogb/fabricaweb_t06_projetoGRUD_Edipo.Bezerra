@@ -3,10 +3,7 @@ package br.com.fabricadeprogramador.persistencia.entidade;
 import java.io.Serializable;
 import java.util.List;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Cliente implements Serializable {
@@ -17,10 +14,17 @@ public class Cliente implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-		private long id;
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "seq_cliente")
+	@SequenceGenerator(name = "seq_cliente", sequenceName = "seq_cliente", initialValue = 1)
+	private long id;
 	private String nome;
+
+	@JoinColumn
+	@ManyToOne
 	private Cidade cidade;
+
+	@JoinColumn
+	@OneToMany
 	private List<Contato> contatos;
 
 	public long getId() {
