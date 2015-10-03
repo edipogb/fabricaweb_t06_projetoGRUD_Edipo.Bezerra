@@ -25,14 +25,7 @@ public class ClienteService {
 	public void salvar(Cliente cliente) throws ServiceException {
 
 		try {
-//			// verificar se o Cliente ja existe pelo id
-//			Cliente clienteExistente = dao.buscarPorId(cliente.getId());
-//
-//			if (clienteExistente != null) {
-//				// se o id já estiver sendo usado, lança-se uma exceção
-//				throw new ServiceException("Cliente Já Existe já existe!");
-//			}
-			// salvar usuario
+
 			dao.salvar(cliente);
 
 		} catch (DAOException e) {

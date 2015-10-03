@@ -15,6 +15,7 @@ import br.com.fabricadeprogramador.persistencia.entidade.Cidade;
 import br.com.fabricadeprogramador.persistencia.entidade.Cliente;
 import br.com.fabricadeprogramador.persistencia.entidade.Estado;
 import br.com.fabricadeprogramador.service.ClienteService;
+import javax.annotation.PostConstruct;
 
 @Controller
 @ManagedBean
@@ -43,11 +44,12 @@ public class ClienteController {
 	private List<Cliente> listaBuscada;
 	
 	//Construttor
+        
 	public void ClienteController(){
 		
 	}
 	
-
+        @PostConstruct
 	public void init(){
 		setCliente(new Cliente());
 		

@@ -1,5 +1,7 @@
 package br.com.fabricadeprogramador.persistencia.DAO;
 
+import br.com.fabricadeprogramador.persistencia.DAO.exception.DAOException;
+import br.com.fabricadeprogramador.persistencia.entidade.TipoContato;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -9,7 +11,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface TipoContatoDAO {
 
-    public void salvar();
-    public void remover();
+    public void salvar(TipoContato tipoContato)throws DAOException;
+    public void remover(Long id)throws DAOException;
 
 }
